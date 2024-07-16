@@ -1,0 +1,513 @@
+:root{
+    --pink:light pink;
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Times New Roman', Times, serif;
+    outline:none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 60%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+
+}
+section{
+    padding: 2rem 9%;
+
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    color: white;
+    background: grey;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background:palevioletred;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding:2rem 10%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background-color: white;
+}
+
+header .logo{
+    font-size: 3rem;
+    color:grey;
+    font-weight: bolder;
+
+}
+header .logo span{
+    color:pink
+}
+header .navbar a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color:grey;
+    
+}
+header .icons a{
+    font-size: 2.5rem;
+    color: grey;
+    margin-left: 2rem;
+}
+header .icons a:hover{
+    color:var(--pink);
+}
+header .navbar a:hover{
+    color:var(--pink);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 20px;
+    color: grey;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    cursor: pointer;
+    border:1rem solid rgba(0,0,0,.1);
+    display: none;
+}
+/* media queries */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    section{
+        padding:2rem;
+    }
+    .home{
+        background-position: left;
+    }
+    header{
+        padding: 2rem;
+    }
+}
+@media(max-width:768px)
+{
+    header .fa-bars{
+        display:flex;
+    }
+    header .navbar{
+        position:absolute;
+        top: 100%;
+        left:0;
+        right:0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path:polygon(0 0,100% 0,100% 0,0 0) ;
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path:polygon(0 0.100% 0,100% 0,0 0) ;
+    }
+    header .navbar a{
+        margin:1.5rem;
+        padding: 1.5rem;
+        background-color: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+    }
+    .home{
+        font-size: .5rem;
+    }
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+
+    }
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color:pink ;
+    align-content:center ;
+    background:url(uploads/bg1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    max-width: 50rem;
+    margin-left: 40%;
+    
+}
+.home .content h3{
+    font-size: 6rem;
+    color: grey;
+}
+.home .content span{
+    font-size: 5rem;
+    color:palevioletred;
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-style: italic;
+}
+.home .content span{
+    font-size: 1.5rem;
+    color:palevioletred;
+   
+}
+.home .content p{
+    font-size: 1.5rem;
+    color:grey;
+    font-style: oblique;
+}
+.about{
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    align-content:center;
+    color: beige;
+    background:url(uploads/bg3.jpg) no-repeat;
+    background-size: cover;
+  
+    /*background-position: center;*/
+}
+.heading{
+    display: flex;
+    text-align: center;
+    font-size: 4rem;
+    color: grey;
+    margin-left: 40%;
+    margin-bottom: 50%;
+    /*background: rgba(255,51,153,.05);*/
+}
+.heading span{
+    color: pink;
+}
+
+    
+.about .row{
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+.row h3{
+    font-size: 5rem;
+    font-style: oblique;
+    color: pink;
+    align-items: center;
+    margin-top: 60%;
+
+    
+}
+
+
+
+.about .row .container{
+    flex: 1 1 40rem;
+}
+.para1{
+    font-size: 3rem;
+    color:palevioletred;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.para2{
+    font-size: 1.5rem;
+    color:grey;
+    font-style: italic;
+    margin-left: 5px;
+    font-weight: 10px;
+}
+.icons-container{
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.icons-container .icons{
+    background: #fff;
+    border: .1rem transparent rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    flex: 1rem;
+}
+.icons i{
+    font-size: 20px;
+    color: palevioletred;
+    height: 15px;
+    margin-right: 2rem;
+}
+.info{
+    font-size: 10px;
+    color: grey;
+}
+.header{
+    display: flex;
+    text-align: center;
+    font-size: 4rem;
+    color: grey;
+    margin-left: 40%;
+    /*background: rgba(255,51,153,.05);*/
+}
+.header span{
+    color: pink;
+}
+
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    flex-wrap: wrap;
+
+}
+.products .box-container .box{
+    flex:1 1 30rem;
+    flex-direction: row;
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    
+    
+}
+.img1{
+    width:70%;
+    height:500px;
+}
+.img2{
+    height:500px;
+    width: 50%;
+}
+.products .box-container .box .image{ 
+    
+    position:relative;
+    height: 600px;
+    text-align: center;
+    gap: 2px;
+    padding-top: 2rem;
+    overflow: hidden;
+    text-align: center;
+   
+}
+
+.products .box-container .box .image .img{
+  height: 100px;
+  width: 50%;
+    
+}
+
+.products .box-container .box:hover img{
+    transform:scale(1.1);
+}
+.products .box-container .box .image .icons{
+    position: absolute;
+    bottom: -7rem;
+    left:0;
+    right: 0;
+    display: flex;
+}
+.products .box-container .box:hover .image .icons{
+    bottom:0;
+}
+.products .box-container .box .image .icons a{
+height: 5rem;
+line-height: 5rem;
+font-size: 2rem;
+width: 50%;
+background:pink;
+color: #fff;
+}
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid grey;
+    border-right: .1rem solid grey;
+    width:100%;
+
+}
+.products .box-container .box .image .icons a:hover{
+    background:grey;
+}
+.products .box-container .box .content{
+    padding:2rem;
+    text-align:center;
+}
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color:grey;
+    font-style: italic;
+}
+.products .box-container .box .content .price{
+    font-size: 2.5rem;
+    color: pink;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+#review{
+    background: white;
+}
+.review .box-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.heading1{
+    display: flex;
+    text-align: center;
+    font-size: 4rem;
+    color: grey;
+    margin-left: 40%;
+    /*margin-bottom: 50%;*/
+    /*background: rgba(255,51,153,.05);
+    padding-left: 30%;*/
+}
+.heading1 span{
+    color: pink;
+}
+
+.review .box-container .box{
+   
+      flex-direction: row;
+    flex:1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    position: relative;
+    flex:1 1 30rem;
+    border-color: white;
+    overflow: hidden;
+  
+    margin-top:10px;
+}
+.review .box-container .box .fa-quote-right{
+    position:absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+}
+
+.review .box-container .box .stars i{
+    color: palevioletred;
+    font-size: 2rem;
+}
+.review .box-container .box p{
+    color: grey;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+    text-align: justify;
+}
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+   
+}
+.review .box-container .box .user img{
+    height: 6rem;
+    width:6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color: pink;
+}
+.review .box-container .box .user span{
+    font-size: 1.5rem;
+    color: palevioletred;
+    font-style: italic;
+}
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    flex-direction: row;
+}
+.contact .row form{
+    flex: 1 1 30rem;
+    padding:2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.1);
+    background: white;
+    border-radius: .5rem;
+}
+.contact .row .image{
+    flex: 1 1 30rem;
+}
+.contact .row .image .img{
+    width: 100%;
+}
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 1rem;
+    font-style: italic;
+    color: grey;
+    text-transform: none;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+    background: pink;
+}
+.contact .row form .box:focus{
+    border-color: pink;
+}
+.contact .row foem textarea{
+    height: 15rem;
+    resize: none;
+}
+.footer .box-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+
+}
+.footer .box-container .box{
+    flex:1 1 25rem;
+}
+.footer .box-container .box h3{
+    color: grey;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    display:block;
+    color: grey;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: pink;
+    text-decoration: underline;
+}
